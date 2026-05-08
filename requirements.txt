@@ -1,0 +1,13 @@
+requests>=2.31.0
+beautifulsoup4>=4.12.3
+Pillow>=10.2.0
+tenacity>=8.2.3
+httpx[http2]>=0.27.0
+openai>=1.35.0
+
+# --- Local KB mode (optional) ---
+# Install these if using --search-mode local:
+# numpy>=1.24.0
+# torch>=2.0.0
+# transformers>=4.36.0
+# qwen-vl-utils>=0.0.1

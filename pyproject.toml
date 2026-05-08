@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-search"
+version = "0.1.0"
+description = "A lightweight agentic search evaluation framework with unified model and skill interfaces."
+readme = "README.md"
+authors = [{name = "Anonymous"}]
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.3",
+  "Pillow>=10.2.0",
+  "tenacity>=8.2.3",
+  "httpx[http2]>=0.27.0",
+  "openai>=1.35.0",
+]
+
+[project.optional-dependencies]
+gemini = ["google-generativeai>=0.4.0"]
+browser = ["playwright>=1.40.0"]
+judge = ["tqdm>=4.66.0"]
+local = [
+  "numpy>=1.24.0",
+  "torch>=2.0.0",
+  "transformers>=4.36.0",
+  "qwen-vl-utils>=0.0.1",
+]
+all = [
+  "google-generativeai>=0.4.0",
+  "playwright>=1.40.0",
+  "tqdm>=4.66.0",
+]
+full = [
+  "google-generativeai>=0.4.0",
+  "playwright>=1.40.0",
+  "tqdm>=4.66.0",
+  "numpy>=1.24.0",
+  "torch>=2.0.0",
+  "transformers>=4.36.0",
+  "qwen-vl-utils>=0.0.1",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agentic_search*"]
